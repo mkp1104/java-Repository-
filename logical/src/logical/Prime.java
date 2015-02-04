@@ -2,7 +2,7 @@ package logical;
 import java.util.*;
 public class Prime 
 {
-public static void main(String[] args) 
+ public static void main(String[] args) 
 
 {
 	
@@ -11,15 +11,27 @@ public static void main(String[] args)
 	int x=sc.nextInt();
 	for(int i=2;i<x;i++)
 	{
-		
-		for(int k=2;k<i;k++)
-		{
-			if(i%k==0)
-			{
-				break;
-			}
-			System.out.print(i+",");
-		}
+	    if(isPrime(i))
+	    {
+	        System.out.println(i);
+	        
+	    }
 	}
 }
+    public static boolean isPrime(int num)
+    {
+        boolean flag=true;
+        for(int x=2;x<num;x++)
+        {
+            if(num%x==0)
+            {
+                flag=false;
+                break;
+                
+            }
+          
+        }
+          return flag;
+        
+    }
 }
